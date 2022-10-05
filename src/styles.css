@@ -1,0 +1,32 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.money-tracker-table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid blue;
+  width: 100px;
+  padding: 4px;
+}
+
+input {
+  width: 18%;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.change-button {
+  margin: 5px;
+  width: fit-content;
+  font-size: 18px;
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 16px;
+}
