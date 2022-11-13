@@ -7,7 +7,9 @@ export default function App() {
   const notes = [2000, 500, 200, 100, 20, 10, 5, 2, 1];
   const [noteTracker, setNoteTracker] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0]);
   function calculate() {
-    if (billAmt && moneyPaid) {
+    if (billAmt <= 0 && moneyPaid <= 0) {
+      alert("billAmt and MoneyPaid cant be negative");
+    } else if (billAmt > 0 && moneyPaid > 0) {
       let cashDiff = parseInt(moneyPaid) - parseInt(billAmt);
       if (cashDiff < 0) {
         alert("Please Pay a Valid Amount");
@@ -29,7 +31,7 @@ export default function App() {
         setNoteTracker(arrToUpdate);
       }
     } else {
-      alert("Input Fields  Cannot be Null");
+      alert("Input Fields Cannot be Null");
     }
     setBillAmt("");
     setmoneyPaid("");
